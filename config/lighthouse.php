@@ -28,6 +28,7 @@ return [
          * make sure to return spec-compliant responses in case an error is thrown.
          */
         'middleware' => [
+            'check_custom_header',
             Nuwave\Lighthouse\Support\Http\Middleware\AcceptJson::class,
 
             // Logs in a user if they are authenticated. In contrast to Laravel's 'auth'
@@ -70,7 +71,7 @@ return [
     */
 
     'schema' => [
-        'register' => base_path('graphql/schema.graphql'),
+        'register' => base_path('graphql/user.graphql'),
     ],
 
     /*
